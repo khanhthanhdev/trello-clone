@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
+
+$board-bg-color: #0079bf;
+$gap: 10px;
+$appbar-bg-color: #0067a3;
+body {
+  margin: 0;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size:14px;
+  line-height: 1.3em;
+}
+
+.trello-master {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 40px 50px 1fr;
+  line-height: 1.3em;
+  background-color: $board-bg-color;
+  .navbar {
+    padding-left: $gap;
+    display: flex;
+    align-items: center;
+    &.app {
+      background-color: $appbar-bg-color;
+      font-size: 1.5rem;
+    }
+    &.board {
+      background-color: $appbar-bg-color;
+      font-size: 1.1rem;
+    }
+  }
+
+  .board-colums {
+
+  }
+}
+
