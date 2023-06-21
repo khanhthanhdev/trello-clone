@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
 
-$board-bg-color: #0079bf;
-$gap: 10px;
-$column-header-height: 36px;
-$column-footer-height: 36px;
-$column-border-radius: 5px;
-$card-border-radius: 5px;
-$appbar-bg-color: #0067a3;
-$list-bg-color: #ebecf0;
-$commen-element-bg: rgba(255,255,255,.24);
+@import '_setting.scss';
 
 body {
   margin: 0;
@@ -21,7 +13,11 @@ body {
   height: 100vh;
   overflow: hidden;
   background-color: $board-bg-color;
-
+  color: $app-main-text-color;
+  .icon {
+    font-size: 14px;
+    margin-right: 3px;
+  }
 
 }
 

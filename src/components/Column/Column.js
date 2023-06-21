@@ -49,7 +49,10 @@ function Column(props) {
 
             </div>
             <footer>
-                Add an other card
+                <div className="footer-actions">
+                    <i className="fa fa-plus icon"/>Add an other card
+                </div>
+
             </footer>
         </div>
     )
