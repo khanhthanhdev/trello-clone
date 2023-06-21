@@ -3,7 +3,9 @@ import './Column.scss';
 import Card from "components/Card/Card";
 import { mapOrder } from "utilities/sorts";
 import { Container, Draggable } from "react-smooth-dnd";
+import { Dropdown } from "react-bootstrap";
 
+import ComfirmModal from "components/Common/ConfirmModal";
 
 function Column(props) {
 
@@ -20,7 +22,21 @@ function Column(props) {
     return (
         <div className="column">
             <header className="column-drag-handle">
-                {column.title}
+                <div className="column-title">
+                    {column.title}
+                </div>
+                <div className="column-dropdown-actions">
+                    <Dropdown>
+                        <Dropdown.Toggle  id="dropdown-basic" size="sm" className="dropdown-btn" />
+                            
+                        <Dropdown.Menu>
+                            <Dropdown.Item >Add card ...</Dropdown.Item>
+                            <Dropdown.Item >Remove Column </Dropdown.Item>
+                            <Dropdown.Item >Move all cards in this column</Dropdown.Item>
+                            <Dropdown.Item >Archive all cards in this column</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </div>
             </header>
             <div className="card-list">
                 <Container
@@ -54,6 +70,13 @@ function Column(props) {
                 </div>
 
             </footer>
+
+            <ComfirmModal
+                show={false}
+                onAction={() => { }}
+                title="Remove column"
+                content={`Are you sure you want to remove ${column.title}`}
+            />
         </div>
     )
 }
