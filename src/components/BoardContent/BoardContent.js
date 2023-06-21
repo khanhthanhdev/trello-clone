@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
 import './BoardContent.scss'
 import Column from "components/Column/Column";
-
+import 'App.scss'
 import {isEmpty} from "lodash";
-
+import {Container as BootstrapContainer, Row, Col, Form, Button} from 'react-bootstrap'
 import { mapOrder } from "utilities/sorts";
 import {applyDrag} from "utilities/dragDrop";
 import { Container, Draggable } from "react-smooth-dnd";
@@ -72,9 +72,30 @@ function BoardContent() {
                     
                 ))}
             </Container>
-            <div className="add-new-column">
-                <i className="fa fa-plus icon"/>Add an other column
-            </div>
+            <BootstrapContainer className="trello-container">
+                <Row>
+                    <Col className="add-new-column">
+                        <i className="fa fa-plus icon"/> Add another column
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col className="enter-new-column">
+                        <Form.Control 
+                            size="sm"
+                            type="text"
+                            placeholder="Enter column title..."
+                            className="input-enter-new-column"
+                        />
+                        <Button variant="success" size="sm">
+                            Add column
+                        </Button>
+                        <span className="cancel-new-column">
+                            <i className="fa fa-trash icon"/>
+                        </span>
+                    </Col>
+                </Row>
+            </BootstrapContainer>
         </div>
     )
 }
