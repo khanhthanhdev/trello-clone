@@ -9,21 +9,3 @@ $card-border-radius: 5px;
 $appbar-bg-color: #0067a3;
 $list-bg-color: #ebecf0;
 $commen-element-bg: rgba(255,255,255,.24);
-
-body {
-  margin: 0;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size:14px;
-  line-height: 1.3em;
-}
-
-.trello-master {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 40px 50px 1fr;
-  line-height: 1.3em;
-  background-color: $board-bg-color;
-
-
-}
-
