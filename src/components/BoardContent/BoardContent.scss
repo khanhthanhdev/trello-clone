@@ -55,7 +55,7 @@
       span.cancel-new-column {
         margin-left: $gap;
         i {
-          font-size: 10px;
+          font-size: 16px;
           color: $alert-danger;
           &:hover {
             color: darken($alert-danger, 10%);
