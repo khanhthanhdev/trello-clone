@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
 
-// all = 100vh
-$appbar-height: 4vh;
-$navbar-board-height: 5vh;
-$board-content-height:91vh;
+// 99vh for board, 1vh for scrollbar
+$appbar-height: 5vh;
+$navbar-board-height: 6vh;
+$board-content-height:88vh;
 
 $board-bg-color: #0079bf;
 $gap: 10px;
